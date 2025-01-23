@@ -16,12 +16,14 @@ const Navbar = ({ user }) => {
                             <ul className="flex items-center space-x-1 sm:space-x-3">
                                 <li><Link className="hover:underline" href='/'>Home</Link></li>
                                 {
+                                    user ? <><Link href="/profile" className="hover:underline">
+                                        Profile
+                                    </Link></> : <><LoginLink>
+                                        <button className="px-5 py-1 bg-pink-600 text-white rounded-lg" >Login</button>
+                                    </LoginLink></>
+                                }
+                                {
                                     user ? <>
-                                        <li>
-                                            <Link href="/profile" className="hover:underline">
-                                                Profile
-                                            </Link>
-                                        </li>
                                         <li>
                                             <LogoutLink>
                                                 <button className="px-5 py-1 bg-pink-600 text-white rounded-lg" >Logout</button>

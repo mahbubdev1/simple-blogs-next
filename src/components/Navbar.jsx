@@ -15,7 +15,7 @@ const Navbar = ({ user }) => {
 
                             <ul className="flex items-center space-x-1 sm:space-x-3">
                                 <li><Link className="hover:underline" href='/'>Home</Link></li>
-                                <Link href={`${user ? "/profile" : <LoginLink></LoginLink>}`} className="hover:underline">
+                                <Link href={`${user ? "/profile" : '/api/auth/login'}`} className="hover:underline">
                                     Profile
                                 </Link>
                                 {
